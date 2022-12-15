@@ -18,10 +18,11 @@
 
 ### [Demo](todo) -->
 
-## Install
+## Congiure and Build
 
 ```sh
-todo
+cmake -B _build -S . -DCMAKE_BUILD_TYPE=[Release|Debug|MinSizeRel|RelWithDebInfo] -DBUILD_SHARED_LIBS=[On|Off]
+cmake --build _build --target displayit
 ```
 
 ## Usage
