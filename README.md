@@ -12,17 +12,80 @@
   </a> -->
 </p>
 
-> Cross-platform, extensible, and fast library for displaying data at runtime.
+A cross-platform, extensible, and fast library for displaying data at runtime.
 
 <!-- ### [Homepage](todo)
 
 ### [Demo](todo) -->
 
-## Congiure and Build
+## Nomenclature
+> The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",<br>
+> "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to<br>
+> be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119).
+
+I use [Backus-Naur Form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
+throughout this document. The terminal symbol<br>
+*e* without quotes means "nothing", or the absence of something.
+
+If the form I use in this document is confusing, I encourage you to submit<br>
+an issue, and we can discuss how to make it more clear for everyone :-)
+
+<br>
+
+## Purpose
+There are plenty of tools available for displaying data in C++. A short list:<br>
+
+<li> <a href=https://github.com/alandefreitas/matplotplusplus>matplotplusplus</a>
+<li> <a href=https://github.com/graphia-app/graphia>graphia</a>
+<li> <a href=https://github.com/tbattz/openGLPlotLive>openGLPlotLive</a>
+
+<br>
+These tools are impressive and extensive, but they're also complex and require<br>
+time to learn and use properly. This library trades extensibility and<br>
+customizability for simplicity and ease of use. It might even serve as a<br>
+prototyping library, until the user is ready to learn a more complex data<br>
+visualization tool.
+
+<br>
+
+## Goals
+<li> MUST provide an API for software engineers and programmers to display<br>
+     arbitrary data in a uniform and consistent manner
+<li> MUST NOT add a significant burden to the maintenance or development of<br>
+the program in which it is used
+<li> MUST provide packages for installation (todo)
+<li> MUST support C++17 and later
+<li> SHOULD support C++11 and later
+
+<br>
+
+In addition, the
+[Boost library requirements](https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm)
+and guidelines SHOULD be used to<br>
+guide the creation of the library.
+
+<br>
+
+## Configure and Build
 
 ```sh
-cmake -B _build -S . -DCMAKE_BUILD_TYPE=[Release|Debug|MinSizeRel|RelWithDebInfo] -DBUILD_SHARED_LIBS=[On|Off]
-cmake --build _build --target displayit
+cmake -B _build -S . <options>
+cmake --build _build --target <target>
+```
+where
+```sh
+<options> ::= <option>
+            | <option> <options>
+            | e
+
+<option> ::= '-DCMAKE_BUILD_TYPE='<build-type>
+            | '-DBUILD_SHARED_LIBS='<shared-libs>
+
+<build-type> ::= 'Release' | 'Debug' | 'MinSizeRel' | 'RelWithDebInfo'
+
+<shared-libs> ::= 'On' | 'Off'
+
+<target> ::= 'displayit'
 ```
 
 ## Usage
