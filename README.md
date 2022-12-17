@@ -40,6 +40,7 @@ There are plenty of tools available for displaying data in C++. A short list:<br
 <li> <a href=https://github.com/tbattz/openGLPlotLive>openGLPlotLive</a>
 
 <br>
+
 These tools are impressive and extensive, but they're also complex and require<br>
 time to learn and use properly. This library trades extensibility and<br>
 customizability for simplicity and ease of use. It might even serve as a<br>
