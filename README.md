@@ -51,8 +51,8 @@ visualization tool.
 
 ## Goals
 <ul>
-<li> MUST provide an API for software engineers and programmers to display<br>
-     arbitrary data in a uniform and consistent manner
+<li> MUST provide an API for users to display arbitrary data in a uniform and<br>
+consistent manner
 <li> MUST NOT add a significant burden to the maintenance or development of<br>
 the program in which it is used
 <li> MUST provide packages for installation (todo)
