@@ -50,6 +50,7 @@ visualization tool.
 <br>
 
 ## Goals
+<ul>
 <li> MUST provide an API for software engineers and programmers to display<br>
      arbitrary data in a uniform and consistent manner
 <li> MUST NOT add a significant burden to the maintenance or development of<br>
@@ -57,13 +58,72 @@ the program in which it is used
 <li> MUST provide packages for installation (todo)
 <li> MUST support C++17 and later
 <li> SHOULD support C++11 and later
+</ul>
 
 <br>
 
 In addition, the
 [Boost library requirements](https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm)
-and guidelines SHOULD be used to<br>
-guide the creation of the library.
+and guidelines MAY be used to<br>
+guide the creation of the library. The following lists specific rules from that<br>
+document which apply to this project. For rationale's on these decisisons, see<br>
+the original text.
+
+**One or more of these points may be modified from the original text of the<br>
+document:**
+<ul>
+<li> Aim first for clarity and conciseness; optimization should be only a<br>
+secondary concern ...
+
+<li> Aim for ISO Standard C++. Than means making effective use of the<br>
+standard features of the language, and avoiding non-standard compiler<br>
+extensions. It also means using the C++ Standard Library where applicable.
+
+<li> Headers should be good neighbors. See the
+[header policy](https://www.boost.org/doc/libs/1_34_0/more/header.htm) ...
+<br> (^ With the exception of `boost/config.hpp` and Boost directory names)
+
+<li> Use the naming conventions of the C++ Standard Library<br>
+(See [Naming conventions rationale](https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm#Naming)) ...
+
+<li> Choose meaningful names - explicit is better than implicit, and readability<br>
+counts. There is a strong preference for clear and descriptive names, even if<br>
+lengthy.
+
+<li> Use exceptions to report errors where appropriate, and write code that is<br>
+safe in the face of exceptions.
+
+<li> Avoid exception-specifications. See
+[exception-specification rationale](https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm#Exception-specification).
+
+<li> Provide sample programs or confidence tests so potential users can see how<br>
+to use your library.
+
+<li> Use fixed-width fonts.  See fonts rationale.
+
+<li> Use spaces rather than tabs. See tabs rationale.
+
+<li> Limit line lengths to 80 characters.
+
+<li> Begin all source files (including programs, headers, scripts, etc.) with:<br>
+<ul>
+    <li> A comment line describing the contents of the file.
+    <li> Comments describing copyright and licensing ...
+</ul>
+
+<li> Directory naming:
+<ul>
+    <li> Contains only lowercase ASCII letters, numbers, and underscores
+    <li> Leading character must be alphabetic
+    <li> Maximum length of 31 characters
+</ul>
+
+<li> File naming:
+  - Files intended to be processed by a C++ compiler as part of a<br>
+translation unit should have a three-letter filename extension ending in<br>
+"pp"
+  - Other files should not use extensions ending in "pp"
+</ul>
 
 <br>
 
