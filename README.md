@@ -60,8 +60,20 @@ the program in which it is used
 <li> SHOULD support C++11 and later
 </ul>
 
-<br>
+## Dependencies
+<li> [Ninja-Build](https://ninja-build.org/)
 
+## Installation
+### Windows
+*todo*
+
+### Linux
+*todo*
+
+### MacOS
+*todo*
+
+## Developer Guide
 In addition, the
 [Boost library requirements](https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm)
 and guidelines MAY be used to<br>
