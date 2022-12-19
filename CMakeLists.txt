@@ -10,3 +10,11 @@ project("displayit"
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+
+if (UNIX)
+    message("\nUNIX system detected\n")
+elseif (APPLE)
+    message("\nApple system detected\n")
+else ()
+    message("\nWindows system detected\n")
+endif()

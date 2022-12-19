@@ -142,8 +142,8 @@ translation unit should have a three-letter filename extension ending in<br>
 ## Configure and Build
 
 ```sh
-cmake -B _build -S . <options>
-cmake --build _build --target <target>
+cmake -B build -S . <options>
+cmake --build build --target <target>
 ```
 where
 ```sh
