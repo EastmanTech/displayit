@@ -1,3 +1,9 @@
+# Author: Alex Eastman
+# Date: 12/18/22
+# File: CMakeLists.txt
+# 
+# Top-level CMake file for building the displayit library
+
 cmake_minimum_required(VERSION 3.20)
 
 set(CMAKE_TOOLCHAIN_FILE "dependencies/vcpkg/scripts/buildsystems/vcpkg.cmake")
@@ -18,3 +24,5 @@ elseif (APPLE)
 else ()
     message("\nWindows system detected\n")
 endif()
+
+add_subdirectory(src)
