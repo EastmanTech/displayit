@@ -14,16 +14,16 @@
 
 A cross-platform, extensible, and fast library for displaying data at runtime.
 
-<!-- ### [Homepage](todo)
+<!-- ### <a href="todo">Homepage</a>
 
-### [Demo](todo) -->
+### <a href="todo">Demo</a> -->
 
 ## Nomenclature
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",<br>
 > "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to<br>
-> be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119).
+> be interpreted as described in <a href="https://www.rfc-editor.org/rfc/rfc2119">RFC 2119</a>.
 
-I use [Backus-Naur Form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
+I use <a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus-Naur Form</a>
 throughout this document. The terminal symbol<br>
 *e* without quotes means "nothing", or the absence of something.
 
@@ -60,22 +60,55 @@ the program in which it is used
 <li> SHOULD support C++11 and later
 </ul>
 
+<br>
+
 ## Dependencies
-<li> [Ninja-Build](https://ninja-build.org/)
-
-## Installation
-### Windows
 *todo*
 
-### Linux
-*todo*
+<br>
 
-### MacOS
-*todo*
+## Configure and Build
+
+```sh
+cmake -B build -S . <config_options>  // configure
+cmake --build build <build_options>   // build
+```
+where
+```sh
+<config_options> ::= <config_option>
+                   | <config_option> <config_options>
+                   | e
+
+<config_option> ::= '-DCMAKE_BUILD_TYPE='<build_type>
+                  | '-DBUILD_SHARED_LIBS='<shared_libs>
+
+<build_options> ::= <build_option>
+                  | <build_option> <build_options>
+                  | e
+
+<build_option> ::= '--config '<build_type>
+                 | '--target '<target>
+
+<build_type> ::= 'Release' | 'Debug' | 'MinSizeRel' | 'RelWithDebInfo'
+
+<shared_libs> ::= 'On' | 'Off'
+
+<target> ::= 'displayit' | 'install' | 'test'
+```
+
+## Usage
+```sh
+todo
+```
+
+## Run tests
+```sh
+cmake --build build --target test
+```
 
 ## Developer Guide
 In addition, the
-[Boost library requirements](https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm)
+<a href="https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm">Boost library requirements</a>
 and guidelines MAY be used to<br>
 guide the creation of the library. The following lists specific rules from that<br>
 document which apply to this project. For rationale's on these decisisons, see<br>
@@ -85,18 +118,18 @@ the original text.
 document:**
 <ul>
 <li> Aim first for clarity and conciseness; optimization should be only a<br>
-secondary concern ...
+secondary concern
 
 <li> Aim for ISO Standard C++. Than means making effective use of the<br>
 standard features of the language, and avoiding non-standard compiler<br>
 extensions. It also means using the C++ Standard Library where applicable.
 
 <li> Headers should be good neighbors. See the
-[header policy](https://www.boost.org/doc/libs/1_34_0/more/header.htm) ...
+<a href="https://www.boost.org/doc/libs/1_34_0/more/header.htm">header policy</a>
 <br> (^ With the exception of `boost/config.hpp` and Boost directory names)
 
 <li> Use the naming conventions of the C++ Standard Library<br>
-(See [Naming conventions rationale](https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm#Naming)) ...
+(See <a href="https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm#Naming">Naming conventions rationale</a>)
 
 <li> Choose meaningful names - explicit is better than implicit, and readability<br>
 counts. There is a strong preference for clear and descriptive names, even if<br>
@@ -106,7 +139,7 @@ lengthy.
 safe in the face of exceptions.
 
 <li> Avoid exception-specifications. See
-[exception-specification rationale](https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm#Exception-specification).
+<a href="https://www.boost.org/doc/libs/1_34_0/more/lib_guide.htm#Exception-specification">exception-specification rationale</a>.
 
 <li> Provide sample programs or confidence tests so potential users can see how<br>
 to use your library.
@@ -120,7 +153,7 @@ to use your library.
 <li> Begin all source files (including programs, headers, scripts, etc.) with:<br>
 <ul>
     <li> A comment line describing the contents of the file.
-    <li> Comments describing copyright and licensing ...
+    <li> Comments describing copyright and licensing
 </ul>
 
 <li> Directory naming:
@@ -139,40 +172,6 @@ translation unit should have a three-letter filename extension ending in<br>
 
 <br>
 
-## Configure and Build
-
-```sh
-cmake -B build -S . <options>
-cmake --build build --target <target>
-```
-where
-```sh
-<options> ::= <option>
-            | <option> <options>
-            | e
-
-<option> ::= '-DCMAKE_BUILD_TYPE='<build-type>
-            | '-DBUILD_SHARED_LIBS='<shared-libs>
-
-<build-type> ::= 'Release' | 'Debug' | 'MinSizeRel' | 'RelWithDebInfo'
-
-<shared-libs> ::= 'On' | 'Off'
-
-<target> ::= 'displayit'
-```
-
-## Usage
-
-```sh
-todo
-```
-
-## Run tests
-
-```sh
-todo
-```
-
 ## Author
 
 **Alex Eastman**
@@ -185,12 +184,12 @@ todo
 <!--
 ## Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](todo). You can also take a look at the [contributing guide](todo).-->
+Contributions, issues and feature requests are welcome!<br />Feel free to check <a href="todo">issues page</a>. You can also take a look at the <a href="todo">contributing guide</a>.-->
 
 ## License
 
-Copyright © 2022 [Alex Eastman](https://github.com/alexeast99).<br />
-This project is [Unlicense](https://unlicense.org) licensed.
+Copyright © 2022 <a href="https://github.com/alexeast99">Alex Eastman</a>.<br />
+This project is <a href="https://unlicense.org">Unlicense</a> licensed.
 
 ***
-_This README was generated by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+_This README was generated by <a href="https://github.com/kefranabg/readme-md-generator">readme-md-generator</a>_

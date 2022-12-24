@@ -25,4 +25,6 @@ else ()
     message("\nWindows system detected\n")
 endif()
 
-add_subdirectory(src)
+
+# add_library("displayit" "displayit.hpp")
+# add_subdirectory(src)
